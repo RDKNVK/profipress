@@ -1,0 +1,121 @@
+header {
+}
+footer {
+}
+body {
+    .bg('bg.png', 0 0, repeat);
+    .centerWrap {
+        width: 980px;
+        margin: 0 auto;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    }
+    &.archiv {
+        .mainWrap {
+            text-align: center;
+        }
+    }
+    .mainWrap {
+        .clear();
+        .bg(white);
+        padding: 20px 10px;
+        min-height: 755px;
+        h1 {
+            font-size: 3.4em;
+            color: #33b438;
+        }
+        h1, p {
+            text-align: center;
+        }
+        p {
+            font-size: 1.3em;
+            color: #444444;
+            line-height: 2;
+            max-width: 512px;
+            margin: 20px auto 30px;
+            font-family: Georgia, serif;
+        }
+        .magazine-list {
+            li {
+                @w: 320px;
+                @pl: 39px;
+                @pr: 38px;
+                display: block;
+                padding: 0 38px 0 39px;
+                float: left;
+                width: @w;
+                height: 479px;
+                position: relative;
+
+                .bk-info {
+                    text-align: center;
+                    position: absolute;
+                    bottom: 0;
+                    width: @w - @pl - @pr;
+                    height: 140px;
+
+                    .name, .btn {
+                        font-family: @proximaB;
+                    }
+                    .btn {
+                        padding: 0 10px;
+                        margin-top: 20px;
+                    }
+                    .linkWrap {
+                        a {
+                            font-size: 2em;
+                            color: #262626;
+                            border-bottom: 1px solid #aaa;
+                            &:hover {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bookshelf {
+        	.clear();
+			.bg('shelf.png', center bottom);
+			padding-top: 39px;
+			margin: 20px auto 0;
+			position: relative;
+			width: 845px;
+			height: 435px;
+
+			.label {
+				width: 134px;
+				height: 30px;
+				.bg('label.png');
+				position: absolute;
+				line-height: 30px;
+				font-family: @proximaB;
+				font-size: 1.6em;
+				color: white;
+				left: 355px;
+				bottom: 38px;
+			}
+            .bk-list {
+            	.clear();
+            }
+/*
+            @N: 10;
+			@half: floor(@N/2);
+            .setZI (@i) when (@i > @half) {
+            	.setZI (@i - 1);
+
+            	li:nth-child(@{i}) {
+            		z-index: @half - (@i - @half);
+            	}
+            }
+            .setZI (@i) when (@i <= @half) and (@i > 0) {
+            	.setZI (@i - 1);
+
+            	li:nth-child(@{i}) {
+            		z-index:  @i;
+            	}
+            }
+            .setZI(@N);
+            */
+        }
+    }
+}

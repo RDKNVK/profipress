@@ -1,0 +1,542 @@
+@bookNumber: 10;
+@bookW: 65px;
+@margLeft: -2px;
+@booksWidth: @bookNumber*@bookW + @bookNumber*@margLeft; // widths + margins
+@bookH: 321px;
+@bgcolor: #34c08d;
+@frontW: 243px;
+
+.bookshelf {
+
+    .bk-list {
+        perspective: 1800px;
+        perspective-origin: 50% 15%;
+        
+        li {
+            .bk-book {
+                transform: rotate3d(0,1,0,90deg);
+                &:hover {
+                    transform: rotateY(90deg) rotateZ(-15deg) translate3d(-100px,0,0);
+                }    
+                .bk-left {
+                    box-shadow: 0px 3px 5px rgba(0,0,0,.5);
+                }
+            }
+        }
+    }
+}
+.bk-list.magazine-list {
+    .clear();
+    width: 960px;
+    li {
+        perspective: 1800px;
+        perspective-origin: 50% 15%;
+        .bk-book {
+            width: 243px;
+        }
+        .bk-book:hover {
+            transform: rotate3d(0,1,0,35deg)
+        }
+        .bk-back {
+            box-shadow: 0px 15px 20px rgba(0,0,0,.5);
+        }
+    }
+}
+.bk-list {
+    list-style: none;
+    position: relative;
+    width: @booksWidth;
+    margin: 0 auto;
+    li {
+        position: relative;
+        width: @bookW;
+        height: @bookH;
+        float: left;
+        z-index: 1;
+        margin: 0px 0px 0px @margLeft;
+        transform-style: preserve-3d;
+        .bk-book {
+            cursor: pointer;
+            position: absolute;
+            width: 100%;
+            height: @bookH;
+            transform-style: preserve-3d;
+            transition: transform .5s;
+        }
+        .bk-front {
+            //transform-style: preserve-3d;
+            transform-origin: 0% 50%;
+            transition: transform .5s;
+            transform: translate3d(0,0,33px); // 31px zpusobi blikani
+            position: relative;
+            & > div {
+                backface-visibility: hidden;
+                transform-style: preserve-3d;
+                border-radius: 0 3px 3px 0;
+                box-shadow:inset 4px 0 10px rgba(0, 0, 0, 0.1);
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: -2px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .bk-page {
+            //transform: translate3d(0,0,19px);
+            transform: translate3d(0,0,32px);
+            display: none;
+            //width: 295px;
+            width: @frontW - 10;
+            //height: 390px;
+
+            height: @bookH - 21;
+            top: 5px;
+            backface-visibility: hidden;
+
+        }
+        .bk-back {
+            //transform: rotate3d(0,1,0,-180deg) translate3d(0,0,20px);
+            transform: rotate3d(0,1,0,-180deg) translate3d(0,0,33px);
+            border-radius: 3px 0 0 3px;
+
+        }
+        .bk-cover-back {
+            //background-color: #000;
+            background-color: @bgcolor;
+            transform: rotate3d(0,1,0,-180deg);
+        }
+        .bk-right {
+            height: 390px;
+            height: @bookH - 10;
+            top: 5px;
+            transform: rotate3d(0,1,0,90deg) translate3d(0,0,@frontW - 10);
+            backface-visibility: hidden;
+        }
+        .bk-left {
+            height: @bookH;
+            transform: rotate3d(0,1,0,-90deg);
+            box-shadow:inset 4px 0 5px rgba(255,255,255,0.1),inset 5px 0 5px rgba(0,0,0,0.05),inset -5px 0 5px rgba(0,0,0,0.04);
+        }
+        .bk-top {
+            transform: rotate3d(1,0,0,90deg);
+        }
+        .bk-bottom {
+            //transform: rotate3d(1,0,0,-90deg) translate3d(0,0,390px);
+            transform: rotate3d(1,0,0,-90deg) translate3d(0,0,@bookH - 30px);
+        }
+        .bk-viewinside {
+            .bk-front {
+                //transform: translate3d(0,0,20px) rotate3d(0,1,0,-160deg);
+                transform: translate3d(0,0,33px) rotate3d(0,1,0,-160deg);
+            }
+        }
+        .bk-book.bk-viewinside {
+            transform: rotate3d(0,1,0,0deg) translateX(0px) translateZ(100px) !important;
+        }
+        .bk-book.bk-outside {
+            transform: rotate3d(0,1,0,90deg) translateX(-300px);
+        }
+        .bk-book.bk-viewback {
+            transform: translate3d(0,0,0px) rotate3d(0,1,0,180deg);
+        }
+        .bk-front:after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            bottom: 1px;
+            left: -1px;
+            width: 1px;
+        }
+        .bk-back:after {
+            left: auto;
+            right: 10px;
+        }
+    }
+    li:last-child {
+        margin-right: 0;
+    }
+}
+
+.bk-list li .bk-book &>div,
+.bk-list li .bk-front &>div {
+    display: block;
+    position: absolute;
+}
+.bk-list li .bk-front,
+.bk-list li .bk-back,
+.bk-list li .bk-front &>div {
+    //width: 300px;
+    width: @frontW;
+    height: @bookH - 11;
+    height: @bookH;
+}
+.bk-list li .bk-left,
+.bk-list li .bk-right {
+    width: 40px;
+	width: @bookW + 1; /// tohle delalo bordel
+    //left: -20px;
+    left: -35px;
+    background-color: transparent;
+}
+.bk-list li .bk-top,
+.bk-list li .bk-bottom {
+    width: 295px;
+    width: @frontW - 10;
+    //width: @bookW - 40;
+    //height: 40px;
+    height: @bookW;
+    top: -15px;
+    backface-visibility: hidden;
+}
+.bk-list li .bk-bottom {
+	bottom: -15px;	
+}
+.bk-list li .bk-page {
+	background-color: #fff;
+}
+//.bk-list li .bk-right,
+.bk-list li .bk-top,
+.bk-list li .bk-bottom {
+    background-color: #eee;
+}
+.bk-list li .bk-right {
+	background-color: @bgcolor;	
+    background-color: #eee; 
+}
+.bk-list li .bk-cover:after,
+.bk-list li .bk-back:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    width: 3px;
+    background: rgba(0,0,0,0.06);
+    box-shadow: 1px 0 3px rgba(255, 255, 255, 0.1);
+}
+.bk-left {
+	//.bg('left-zemedelec.png');
+    position: relative;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+    h2 {
+        width: @bookH;
+        height: @bookW;
+        transform-origin: 0 0;
+        //transform: rotate(90deg) translateY(-@bookW);
+        transform: rotate(-90deg) translateX(-@bookH);
+        //background-color: red;
+        line-height: @bookW;
+        text-align: right;
+        padding-right: 30px;
+        font-size: 2.4em;
+        font-family: @proximaB;
+        color: #fff;
+
+    }
+}
+.bk-content {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    padding: 30px;
+    overflow: hidden;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    backface-visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    cursor: default;
+    p {
+        padding: 0 0 10px;
+        color: #000;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: justify;
+        -khtml-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+.bk-content-current {
+    opacity: 1;
+    pointer-events: auto;
+}
+.bk-page {
+    nav {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        position: relative;
+        z-index: 100;
+        cursor: pointer;
+        span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            color: #aaa;
+            background: #f0f0f0;
+            border-radius: 50%;
+        }
+    }
+}
+
+// puvodne .book-1
+.bk-book-shelf {
+    .bk-cover {
+        .bg(@bgcolor);
+
+        h2 {
+        	display: none;
+
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding: 30px;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+            span:first-child {
+                display: block;
+            }
+        }
+    }
+	.bk-front &>div,
+	.bk-back,
+	.bk-left,
+	.bk-front:after {
+    	//background-color: #ff924a;
+    	background-color: @bgcolor;
+	}
+
+	.bk-cover h2 span:first-child,
+	.bk-left h2 span:first-child {
+    	text-transform: uppercase;
+    	font-weight: 400;
+    	font-size: 13px;
+    	padding-right: 20px;
+	}
+
+	.bk-cover h2 span:last-child,
+	.bk-left h2 span:last-child {
+    	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+	}
+
+    .bk-content {
+        p {
+            font-family: Georgia, Times, "Times New Roman", serif;
+        }
+    }
+/*
+    .bk-left {
+        h2 {
+            color: #fff;
+            font-size: 15px;
+            line-height: 40px;
+            padding-right: 10px;
+            text-align: right;
+        }
+    }
+*/
+    .bk-back {
+        p {
+            color: #fff;
+            font-size: 13px;
+            padding: 40px;
+            text-align: center;
+            font-weight: 700;
+        }
+    }
+}
+.bk-list li .bk-book.bk-bookdefault:hover {
+    -webkit-transform: rotate3d(0,1,0,35deg);
+    -moz-transform: rotate3d(0,1,0,35deg);
+    transform: rotate3d(0,1,0,35deg);
+}
+/*
+.book-2 .bk-front &>div,.book-2 .bk-back,.book-2 .bk-left,.book-2 .bk-front:after {
+    background-color: #222;
+}
+.book-2 {
+    .bk-cover {
+        background-image: url(../images/2.png);
+        background-repeat: no-repeat;
+        background-position: 98% 0%;
+        h2 {
+            font-size: 138px;
+            line-height: 102px;
+            padding: 30px;
+            span:first-child {
+                position: relative;
+                display: block;
+            }
+            span:first-child:before {
+                content: 'A novel';
+                font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+                text-transform: uppercase;
+                position: absolute;
+                color: red;
+                font-size: 20px;
+                right: -15px;
+                bottom: -60px;
+            }
+            span:last-child {
+                font-size: 100px;
+                line-height: 80px;
+                display: block;
+                position: relative;
+            }
+            span:last-child:before {
+                content: 'by';
+                font-size: 16px;
+                color: red;
+                position: absolute;
+                top: -32px;
+                left: 62px;
+                font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+            }
+            span:last-child:after {
+                content: '';
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: #f9ed65;
+                position: absolute;
+                top: 5px;
+                left: 101px;
+            }
+        }
+    }
+    .bk-left {
+        h2 {
+            font-size: 20px;
+            line-height: 40px;
+            padding-right: 10px;
+            text-align: right;
+        }
+    }
+    .bk-back {
+        p {
+            color: red;
+            font-size: 13px;
+            font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+            padding: 40px;
+            text-align: center;
+        }
+    }
+}
+.book-2 .bk-cover h2,.book-2 .bk-left h2 {
+    color: #fff;
+    font-family: 'the_godfatherregular', Georgia, serif;
+    font-weight: 400;
+}
+.book-3 .bk-front &>div,.book-3 .bk-back,.book-3 .bk-left,.book-3 .bk-front:after {
+    background-color: #a4c19e;
+}
+.book-3 {
+    .bk-cover {
+        background-image: url(../images/3.png);
+        background-repeat: no-repeat;
+        background-position: 100% 95%;
+        h2 {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            left: 40px;
+            padding-top: 15px;
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+            span:first-child {
+                display: block;
+            }
+        }
+    }
+    .bk-left {
+        h2 {
+            color: #fff;
+            font-size: 14px;
+            line-height: 40px;
+            text-align: center;
+        }
+    }
+    .bk-back {
+        img {
+            width: 200px;
+            display: block;
+            margin: 30px auto 0;
+        }
+        p {
+            color: #fff;
+            font-size: 13px;
+            font-family: Georgia, Times, "Times New Roman", serif;
+            padding: 40px;
+            text-align: center;
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+        }
+    }
+}
+.book-3 .bk-cover h2 span:first-child,.book-3 .bk-left h2 span:first-child {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 13px;
+    padding-right: 20px;
+}
+.book-3 .bk-cover h2 span:last-child,.book-3 .bk-left h2 span:last-child,.book-3 .bk-content p {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+.bk-list li:nth-child(4) .bk-book .bk-front &>div,.bk-list li:nth-child(4) .bk-book .bk-back,.bk-list li:nth-child(4) .bk-book .bk-left,.bk-list li:nth-child(4) .bk-book .bk-front:after {
+    background-color: #cfa6ef;
+}
+.bk-list li:nth-child(5) .bk-book .bk-front &>div,.bk-list li:nth-child(5) .bk-book .bk-back,.bk-list li:nth-child(5) .bk-book .bk-left,.bk-list li:nth-child(5) .bk-book .bk-front:after {
+    background-color: #FFC2CE;
+}
+.bk-list li:nth-child(6) .bk-book .bk-front &>div,.bk-list li:nth-child(6) .bk-book .bk-back,.bk-list li:nth-child(6) .bk-book .bk-left,.bk-list li:nth-child(6) .bk-book .bk-front:after {
+    background-color: #80B3FF;
+}
+.bk-list li:nth-child(7) .bk-book .bk-front &>div,.bk-list li:nth-child(7) .bk-book .bk-back,.bk-list li:nth-child(7) .bk-book .bk-left,.bk-list li:nth-child(7) .bk-book .bk-front:after {
+    background-color: #FD6E8A;
+}
+.bk-list li:nth-child(8) .bk-book .bk-front &>div,.bk-list li:nth-child(8) .bk-book .bk-back,.bk-list li:nth-child(8) .bk-book .bk-left,.bk-list li:nth-child(8) .bk-book .bk-front:after {
+    background-color: #A2122F;
+}
+.bk-list li:nth-child(9) .bk-book .bk-front &>div,.bk-list li:nth-child(9) .bk-book .bk-back,.bk-list li:nth-child(9) .bk-book .bk-left,.bk-list li:nth-child(9) .bk-book .bk-front:after {
+    background-color: #439877;
+}
+.bk-list li:nth-child(10) .bk-book .bk-front &>div,.bk-list li:nth-child(10) .bk-book .bk-back,.bk-list li:nth-child(10) .bk-book .bk-left,.bk-list li:nth-child(10) .bk-book .bk-front:after {
+    background-color: #5E445D;
+}
+.bk-list li:nth-child(11) .bk-book .bk-front &>div,.bk-list li:nth-child(11) .bk-book .bk-back,.bk-list li:nth-child(11) .bk-book .bk-left,.bk-list li:nth-child(11) .bk-book .bk-front:after {
+    background-color: #A8936D;
+}
+*/
+.no-csstransforms3d .bk-list li .bk-book &>div,.no-csstransforms3d .bk-list li .bk-book .bk-cover-back {
+    display: none;
+}
+.no-csstransforms3d {
+    .bk-list {
+        width: auto;
+        li {
+            position: relative;
+            width: 300px;
+            margin: 10px;
+            float: left;
+            .bk-book {
+                & > div.bk-front {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.no-csstransforms3d .bk-info button,.no-js .bk-info button {
+    display: none;
+}
