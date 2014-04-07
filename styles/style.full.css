@@ -531,21 +531,93 @@ a {
   -ms-transform: rotate3d(0, 1, 0, 35deg);
   transform: rotate3d(0, 1, 0, 35deg);
 }
-.no-preserve3d .bk-list li .bk-book  > div,
+/*
+.no-preserve3d .bk-list li .bk-book &>div,
 .no-preserve3d .bk-list li .bk-book .bk-cover-back {
+    display: none;
+}
+
+.no-preserve3d {
+    .bk-list {
+        width: auto;
+        li {
+            position: relative;
+            width: 300px;
+            margin: 10px;
+            float: left;
+            .bk-book {
+                & > div.bk-front {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+*/
+.no-preserve3d .bookshelf .bk-list {
+  -webkit-perspective: 1800px;
+  -ms-perspective: 1800px;
+  perspective: 1800px;
+  -webkit-perspective-origin: 50% 15%;
+  -ms-perspective-origin: 50% 15%;
+  perspective-origin: 50% 15%;
+}
+.no-preserve3d .bookshelf .bk-list li {
+  left: 0;
+}
+.no-preserve3d .bookshelf .bk-list li .bk-book {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.no-preserve3d .bookshelf .bk-list li .bk-book:hover {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.no-preserve3d .bookshelf .bk-list li .bk-book:hover * {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.no-preserve3d .bookshelf .bk-list li .bk-book:hover .bk-left {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.no-preserve3d .bookshelf .bk-list li .bk-book .bk-front,
+.no-preserve3d .bookshelf .bk-list li .bk-book .bk-back,
+.no-preserve3d .bookshelf .bk-list li .bk-book .bk-page,
+.no-preserve3d .bookshelf .bk-list li .bk-book .bk-top,
+.no-preserve3d .bookshelf .bk-list li .bk-book .bk-bottom,
+.no-preserve3d .bookshelf .bk-list li .bk-book .bk-right {
   display: none;
 }
-.no-preserve3d .bk-list {
-  width: auto;
+.no-preserve3d .bookshelf .bk-list li .bk-book .bk-left {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  left: 0;
 }
-.no-preserve3d .bk-list li {
-  position: relative;
-  width: 300px;
-  margin: 10px;
-  float: left;
+.no-preserve3d .bookshelf .bk-list li .bk-book .bk-left:hover {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
-.no-preserve3d .bk-list li .bk-book > div.bk-front {
+.no-preserve3d .bookshelf .bk-list li .bk-book .bk-left a.magazineYear {
+  width: 65px;
+  height: 321px;
   display: block;
+}
+.no-preserve3d .bookshelf .bk-list li .bk-book .bk-left h2 {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  width: 100%;
+  padding: 0;
+  position: relative;
+  z-index: 6;
+  text-align: center;
 }
 *,
 *:before,

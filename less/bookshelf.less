@@ -378,7 +378,7 @@
     -moz-transform: rotate3d(0,1,0,35deg);
     transform: rotate3d(0,1,0,35deg);
 }
-
+/*
 .no-preserve3d .bk-list li .bk-book &>div,
 .no-preserve3d .bk-list li .bk-book .bk-cover-back {
     display: none;
@@ -395,6 +395,55 @@
             .bk-book {
                 & > div.bk-front {
                     display: block;
+                }
+            }
+        }
+    }
+}
+*/
+.no-preserve3d {
+    .bookshelf {
+        .bk-list {
+            perspective: 1800px;
+            perspective-origin: 50% 15%;
+            
+            li {
+                left: 0;
+                .bk-book {
+                    //transform: rotate3d(0,1,0,190deg);
+                    transform: none;
+                    &:hover {
+                        transform: none;
+                        * {
+                            transform: none;
+                        }
+                        .bk-left {
+                            transform: none;
+                        }
+                    }    
+                    .bk-front, .bk-back, .bk-page, .bk-top, .bk-bottom, .bk-right {
+                        display: none;
+                    }
+                    .bk-left {
+                        transform: none;
+                        left: 0;
+                        &:hover {
+                            transform: none;
+                        }
+                        a.magazineYear {
+                            width: 65px;
+                            height: 321px;
+                            display: block;
+                        }
+                        h2 {
+                            transform: none;
+                            width: 100%;
+                            padding: 0;
+                            position: relative;
+                            z-index: 6;
+                            text-align: center;
+                        }
+                    }
                 }
             }
         }
