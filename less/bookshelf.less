@@ -1,6 +1,6 @@
 @bookNumber: 10;
-@bookW: 65px;
-@margLeft: -2px;
+@bookW: 64px;
+@margLeft: 1px;
 @booksWidth: @bookNumber*@bookW + @bookNumber*@margLeft; // widths + margins
 @bookH: 321px;
 @bgcolor: #34c08d;
@@ -33,12 +33,15 @@
         perspective-origin: 50% 15%;
         .bk-book {
             width: 243px;
+            margin: 0;
         }
         .bk-book:hover {
             transform: rotate3d(0,1,0,35deg)
         }
         .bk-back {
             box-shadow: 0px 15px 20px rgba(0,0,0,.5);
+            left: 5px;
+            width: 239px;
         }
     }
 }
@@ -100,7 +103,8 @@
             //transform: rotate3d(0,1,0,-180deg) translate3d(0,0,20px);
             transform: rotate3d(0,1,0,-180deg) translate3d(0,0,33px);
             border-radius: 3px 0 0 3px;
-
+            width: 235px;
+            left: 5px;
         }
         .bk-cover-back {
             //background-color: #000;
@@ -157,6 +161,9 @@
     li:last-child {
         margin-right: 0;
     }
+    li:nth-child(-n+4):last-child {
+        z-index: 5 !important;
+    }
 }
 
 .bk-list li .bk-book &>div,
@@ -177,21 +184,23 @@
     width: 40px;
 	width: @bookW + 1; /// tohle delalo bordel
     //left: -20px;
-    left: -35px;
+    left: -28px;
     background-color: transparent;
 }
 .bk-list li .bk-top,
 .bk-list li .bk-bottom {
-    width: 295px;
     width: @frontW - 10;
-    //width: @bookW - 40;
-    //height: 40px;
     height: @bookW;
-    top: -15px;
-    backface-visibility: hidden;
+    //backface-visibility: hidden;
+    -moz-backface-visibility: hidden; // musi byt prave jen tento prefix (chrome/ff rozdil)
+}
+.bk-list li .bk-top {
+    top: -28px;
 }
 .bk-list li .bk-bottom {
-	bottom: -15px;	
+	//bottom: 15px;	
+    bottom: 264px;
+    display: none;
 }
 .bk-list li .bk-page {
 	background-color: #fff;

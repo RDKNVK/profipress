@@ -73,7 +73,7 @@ module.exports = function(grunt) {
         autoprefixer: {
             min: {
                 options: {
-                    browsers: ['last 3 version', '> 1%']
+                    browsers: ['last 3 version', '> 1%', 'Firefox > 1']
                 },
                 src: 'styles/style.css'
             },
