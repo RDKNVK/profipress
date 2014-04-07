@@ -16,7 +16,7 @@
             .bk-book {
                 transform: rotate3d(0,1,0,90deg);
                 display: block;
-                
+
                 &:hover {
                     transform: rotateY(90deg) rotateZ(-15deg) translate3d(-100px,0,0);
                 }    
@@ -446,6 +446,15 @@
                             text-align: center;
                         }
                     }
+                }
+            }
+        }
+    }
+    .magazine-list {
+        li {
+            .bk-book {
+                .bk-front {
+                    z-index: 1;
                 }
             }
         }

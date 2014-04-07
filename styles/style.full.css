@@ -620,6 +620,9 @@ a {
   z-index: 6;
   text-align: center;
 }
+.no-preserve3d .magazine-list li .bk-book .bk-front {
+  z-index: 1;
+}
 *,
 *:before,
 *:after {
