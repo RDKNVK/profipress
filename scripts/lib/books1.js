@@ -13,8 +13,6 @@ var Books = (function() {
 				//$bookview = $parent.find( 'button.bk-bookview' ),
 				$bookview = $parent.find( '.bk-front' ),
 				$content = $page.children( 'div.bk-content' ), current = 0;
-
-			console.log($bookview);
 			$parent.find( 'button.bk-bookback' ).on( 'click', function() {				
 				
 				$bookview.removeClass( 'bk-active' );
