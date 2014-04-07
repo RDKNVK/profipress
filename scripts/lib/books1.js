@@ -1,6 +1,6 @@
 var Books = (function() {
 
-	var $books = $( '.bk-list > li > div.bk-book' ), booksCount = $books.length;
+	var $books = $( '.bk-list > li > .bk-book' ), booksCount = $books.length;
 	
 	function init() {
 
@@ -30,10 +30,10 @@ var Books = (function() {
 					
 			} );
 
-			$bookview.on( 'click', function() {
+			$book.on( 'click', function(e) {
 
 				var $this = $( this );			
-				
+				e.preventDefault();
 				$other.data( 'opened', false ).removeClass( 'bk-viewinside' ).parent().css( 'z-index', 0 ).find( 'button.bk-bookview' ).removeClass( 'bk-active' );
 				if( !$other.hasClass( 'bk-viewback' ) ) {
 					$other.addClass( 'bk-bookdefault' );

@@ -12,7 +12,7 @@ var Books = (function() {
 
     function init() {
         $bookLists.each(function() {
-            var $books = $(this).find("li > div.bk-book"),
+            var $books = $(this).find("li > .bk-book"),
                 booksCount = $books.length,
                 currentbook = -1;
 
