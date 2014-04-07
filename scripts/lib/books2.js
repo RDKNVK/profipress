@@ -1,13 +1,13 @@
 var Books = (function() {
 
-    var transEndEventNames = {
+    var /*transEndEventNames = {
         'WebkitTransition': 'webkitTransitionEnd',
         'MozTransition': 'transitionend',
         'OTransition': 'oTransitionEnd',
         'msTransition': 'MSTransitionEnd',
         'transition': 'transitionend'
     },
-        transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
+        transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],*/
         $bookLists = $('.bookshelf');
 
     function init() {
