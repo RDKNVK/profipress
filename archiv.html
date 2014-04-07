@@ -626,6 +626,9 @@
                 Books.init();
 
             });
+            Modernizr.addTest('preserve3d', Modernizr.testAllProps('transformStyle', 'preserve-3d'));
+            
+            console.log(Modernizr.preserve3d);
         </script>
 </body>
 
