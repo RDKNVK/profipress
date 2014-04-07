@@ -41,7 +41,7 @@
         .bk-back {
             box-shadow: 0px 15px 20px rgba(0,0,0,.5);
             left: 5px;
-            width: 239px;
+            width: 222px;
         }
     }
 }
@@ -95,8 +95,15 @@
             //height: 390px;
 
             height: @bookH - 21;
+            height: @bookH - 8;
             top: 5px;
             backface-visibility: hidden;
+            nav {
+                .bk-page-prev, 
+                .bk-page-next {
+                    line-height: 20px;
+                }
+            }
 
         }
         .bk-back {

@@ -30,7 +30,7 @@ var Books = (function() {
                 } else {
                     $parent.css('z-index', booksCount - 1 - i).data('stackval', booksCount - 1 - i);
                 }
-
+/*
                 $book.on('click', function() {
 
                     if (currentbook !== -1 && currentbook !== $parent.index()) {
@@ -54,7 +54,7 @@ var Books = (function() {
                     }
 
                 });
-
+*/
                 if ($content.length > 1) {
 
                     var $navPrev = $('<span class="bk-page-prev">&lt;</span>'),

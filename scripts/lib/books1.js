@@ -1,6 +1,6 @@
 var Books = (function() {
 
-	var $books = $( '#bk-list > li > div.bk-book' ), booksCount = $books.length;
+	var $books = $( '.bk-list > li > div.bk-book' ), booksCount = $books.length;
 	
 	function init() {
 
@@ -10,9 +10,11 @@ var Books = (function() {
 				$other = $books.not( $book ),
 				$parent = $book.parent(),
 				$page = $book.children( 'div.bk-page' ),
-				$bookview = $parent.find( 'button.bk-bookview' ),
+				//$bookview = $parent.find( 'button.bk-bookview' ),
+				$bookview = $parent.find( '.bk-front' ),
 				$content = $page.children( 'div.bk-content' ), current = 0;
 
+			console.log($bookview);
 			$parent.find( 'button.bk-bookback' ).on( 'click', function() {				
 				
 				$bookview.removeClass( 'bk-active' );
