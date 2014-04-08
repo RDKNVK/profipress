@@ -4,7 +4,7 @@
 @booksWidth: @bookNumber*@bookW + @bookNumber*@margLeft; // widths + margins
 @bookH: 321px;
 @bgcolor: #34c08d;
-@frontW: 243px;
+@frontW: 240px;
 
 .bookshelf {
 
@@ -27,6 +27,13 @@
                     display: none;
                 }
             }
+            &:first-child {
+                .bk-book {
+                    .bk-left {
+                        background-color: #148a4e;
+                    }
+                }
+            }
         }
     }
 }
@@ -37,7 +44,7 @@
         perspective: 1800px;
         perspective-origin: 50% 15%;
         .bk-book {
-            width: 243px;
+            width: @frontW;
             margin: 0;
         }
         .bk-book:hover {
@@ -70,6 +77,232 @@
             height: @bookH;
             transform-style: preserve-3d;
             transition: transform .5s;
+            &.zemedelec {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #009350;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+
+            }
+            &.rolnicke_noviny {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #4c915d;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.farmar {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #f03920;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.uroda {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #459737;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.agronom {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #50a741;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.mechanizace {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #226a9f;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.chov {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #cd5e17;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.krmivarstvi {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #f05e19;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.veterinarstvi {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #137cb3;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.vetklinika {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #0c77ab;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.zahradnictvi {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #2daa46;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.floristika {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #db588e;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.komunalni_technika {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #e48313;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.energie21 {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #e64220;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.altenergie {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #e64220;
+                }
+                .bk-left {
+                    img {
+                        left: 26px;
+                    }
+                }
+            }
+            &.rostlinolekar {
+                .bk-cover-back,
+                .bk-front &>div,
+                .bk-back,
+                .bk-left,
+                .bk-front:after {
+                    background-color: #008363;
+                }
+                .bk-left {
+                    img {
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
         }
         .bk-front {
             //transform-style: preserve-3d;
@@ -133,8 +366,6 @@
             left: 5px;
         }
         .bk-cover-back {
-            //background-color: #000;
-            background-color: @bgcolor;
             transform: rotate3d(0,1,0,-180deg);
         }
         .bk-right {
@@ -242,10 +473,6 @@
     //background-color: #eee;
     .bg(#eee,'listy.png');
 }
-.bk-list li .bk-right {
-	background-color: @bgcolor;	
-    background-color: #eee; 
-}
 .bk-list li .bk-cover:after,
 .bk-list li .bk-back:after {
     content: '';
@@ -260,10 +487,12 @@
 .bk-left {
 	//.bg('left-zemedelec.png');
     position: relative;
+    background-image: url('@{imagesDir}bk-left.png');
     img {
         position: absolute;
-        top: 0;
-        left: 0;
+        bottom: 10px;
+        left: 17px;
+        //display: none;
 
     }
     h2 {
@@ -282,39 +511,7 @@
 
     }
 }
-/*
-.bk-content {
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    bottom: 20px;
-    right: 20px;
-    padding: 30px;
-    overflow: hidden;
-    background: #fff;
-    opacity: 0;
-    pointer-events: none;
-    backface-visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
-    cursor: default;
-    p {
-        padding: 0 0 10px;
-        color: #000;
-        font-size: 13px;
-        line-height: 20px;
-        text-align: justify;
-        -khtml-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-}
-.bk-content-current {
-    opacity: 1;
-    pointer-events: auto;
-}
-*/
 
-// puvodne .book-1
 .bk-book-shelf {
     .bk-cover {
         .bg(@bgcolor);
@@ -335,13 +532,7 @@
             }
         }
     }
-	.bk-front &>div,
-	.bk-back,
-	.bk-left,
-	.bk-front:after {
-    	//background-color: #ff924a;
-    	background-color: @bgcolor;
-	}
+
 
 	.bk-cover h2 span:first-child,
 	.bk-left h2 span:first-child {
@@ -361,17 +552,7 @@
             font-family: Georgia, Times, "Times New Roman", serif;
         }
     }
-/*
-    .bk-left {
-        h2 {
-            color: #fff;
-            font-size: 15px;
-            line-height: 40px;
-            padding-right: 10px;
-            text-align: right;
-        }
-    }
-*/
+
     .bk-back {
         p {
             color: #fff;
@@ -387,29 +568,8 @@
     -moz-transform: rotate3d(0,1,0,35deg);
     transform: rotate3d(0,1,0,35deg);
 }
-/*
-.no-preserve3d .bk-list li .bk-book &>div,
-.no-preserve3d .bk-list li .bk-book .bk-cover-back {
-    display: none;
-}
 
-.no-preserve3d {
-    .bk-list {
-        width: auto;
-        li {
-            position: relative;
-            width: 300px;
-            margin: 10px;
-            float: left;
-            .bk-book {
-                & > div.bk-front {
-                    display: block;
-                }
-            }
-        }
-    }
-}
-*/
+
 .no-preserve3d {
     .bookshelf {
         .bk-list {

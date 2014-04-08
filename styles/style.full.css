@@ -154,6 +154,9 @@ a {
 .bookshelf .bk-list li .bk-book .bk-page {
   display: none;
 }
+.bookshelf .bk-list li:first-child .bk-book .bk-left {
+  background-color: #148a4e;
+}
 .bk-list.magazine-list {
   *zoom: 1;
   width: 960px;
@@ -175,7 +178,7 @@ a {
   perspective-origin: 50% 15%;
 }
 .bk-list.magazine-list li .bk-book {
-  width: 243px;
+  width: 240px;
   margin: 0;
 }
 .bk-list.magazine-list li .bk-book:hover {
@@ -217,6 +220,167 @@ a {
   -webkit-transition: -webkit-transform .5s;
   transition: transform .5s;
 }
+.bk-list li .bk-book.zemedelec .bk-cover-back,
+.bk-front .bk-list li .bk-book.zemedelec > div,
+.bk-list li .bk-book.zemedelec .bk-back,
+.bk-list li .bk-book.zemedelec .bk-left,
+.bk-list li .bk-book.zemedelec .bk-front:after {
+  background-color: #009350;
+}
+.bk-list li .bk-book.zemedelec .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.rolnicke_noviny .bk-cover-back,
+.bk-front .bk-list li .bk-book.rolnicke_noviny > div,
+.bk-list li .bk-book.rolnicke_noviny .bk-back,
+.bk-list li .bk-book.rolnicke_noviny .bk-left,
+.bk-list li .bk-book.rolnicke_noviny .bk-front:after {
+  background-color: #4c915d;
+}
+.bk-list li .bk-book.rolnicke_noviny .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.farmar .bk-cover-back,
+.bk-front .bk-list li .bk-book.farmar > div,
+.bk-list li .bk-book.farmar .bk-back,
+.bk-list li .bk-book.farmar .bk-left,
+.bk-list li .bk-book.farmar .bk-front:after {
+  background-color: #f03920;
+}
+.bk-list li .bk-book.farmar .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.uroda .bk-cover-back,
+.bk-front .bk-list li .bk-book.uroda > div,
+.bk-list li .bk-book.uroda .bk-back,
+.bk-list li .bk-book.uroda .bk-left,
+.bk-list li .bk-book.uroda .bk-front:after {
+  background-color: #459737;
+}
+.bk-list li .bk-book.uroda .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.agronom .bk-cover-back,
+.bk-front .bk-list li .bk-book.agronom > div,
+.bk-list li .bk-book.agronom .bk-back,
+.bk-list li .bk-book.agronom .bk-left,
+.bk-list li .bk-book.agronom .bk-front:after {
+  background-color: #50a741;
+}
+.bk-list li .bk-book.agronom .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.mechanizace .bk-cover-back,
+.bk-front .bk-list li .bk-book.mechanizace > div,
+.bk-list li .bk-book.mechanizace .bk-back,
+.bk-list li .bk-book.mechanizace .bk-left,
+.bk-list li .bk-book.mechanizace .bk-front:after {
+  background-color: #226a9f;
+}
+.bk-list li .bk-book.mechanizace .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.chov .bk-cover-back,
+.bk-front .bk-list li .bk-book.chov > div,
+.bk-list li .bk-book.chov .bk-back,
+.bk-list li .bk-book.chov .bk-left,
+.bk-list li .bk-book.chov .bk-front:after {
+  background-color: #cd5e17;
+}
+.bk-list li .bk-book.chov .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.krmivarstvi .bk-cover-back,
+.bk-front .bk-list li .bk-book.krmivarstvi > div,
+.bk-list li .bk-book.krmivarstvi .bk-back,
+.bk-list li .bk-book.krmivarstvi .bk-left,
+.bk-list li .bk-book.krmivarstvi .bk-front:after {
+  background-color: #f05e19;
+}
+.bk-list li .bk-book.krmivarstvi .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.veterinarstvi .bk-cover-back,
+.bk-front .bk-list li .bk-book.veterinarstvi > div,
+.bk-list li .bk-book.veterinarstvi .bk-back,
+.bk-list li .bk-book.veterinarstvi .bk-left,
+.bk-list li .bk-book.veterinarstvi .bk-front:after {
+  background-color: #137cb3;
+}
+.bk-list li .bk-book.veterinarstvi .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.vetklinika .bk-cover-back,
+.bk-front .bk-list li .bk-book.vetklinika > div,
+.bk-list li .bk-book.vetklinika .bk-back,
+.bk-list li .bk-book.vetklinika .bk-left,
+.bk-list li .bk-book.vetklinika .bk-front:after {
+  background-color: #0c77ab;
+}
+.bk-list li .bk-book.vetklinika .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.zahradnictvi .bk-cover-back,
+.bk-front .bk-list li .bk-book.zahradnictvi > div,
+.bk-list li .bk-book.zahradnictvi .bk-back,
+.bk-list li .bk-book.zahradnictvi .bk-left,
+.bk-list li .bk-book.zahradnictvi .bk-front:after {
+  background-color: #2daa46;
+}
+.bk-list li .bk-book.zahradnictvi .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.floristika .bk-cover-back,
+.bk-front .bk-list li .bk-book.floristika > div,
+.bk-list li .bk-book.floristika .bk-back,
+.bk-list li .bk-book.floristika .bk-left,
+.bk-list li .bk-book.floristika .bk-front:after {
+  background-color: #db588e;
+}
+.bk-list li .bk-book.floristika .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.komunalni_technika .bk-cover-back,
+.bk-front .bk-list li .bk-book.komunalni_technika > div,
+.bk-list li .bk-book.komunalni_technika .bk-back,
+.bk-list li .bk-book.komunalni_technika .bk-left,
+.bk-list li .bk-book.komunalni_technika .bk-front:after {
+  background-color: #e48313;
+}
+.bk-list li .bk-book.komunalni_technika .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.energie21 .bk-cover-back,
+.bk-front .bk-list li .bk-book.energie21 > div,
+.bk-list li .bk-book.energie21 .bk-back,
+.bk-list li .bk-book.energie21 .bk-left,
+.bk-list li .bk-book.energie21 .bk-front:after {
+  background-color: #e64220;
+}
+.bk-list li .bk-book.energie21 .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.altenergie .bk-cover-back,
+.bk-front .bk-list li .bk-book.altenergie > div,
+.bk-list li .bk-book.altenergie .bk-back,
+.bk-list li .bk-book.altenergie .bk-left,
+.bk-list li .bk-book.altenergie .bk-front:after {
+  background-color: #e64220;
+}
+.bk-list li .bk-book.altenergie .bk-left img {
+  left: 26px;
+}
+.bk-list li .bk-book.rostlinolekar .bk-cover-back,
+.bk-front .bk-list li .bk-book.rostlinolekar > div,
+.bk-list li .bk-book.rostlinolekar .bk-back,
+.bk-list li .bk-book.rostlinolekar .bk-left,
+.bk-list li .bk-book.rostlinolekar .bk-front:after {
+  background-color: #008363;
+}
+.bk-list li .bk-book.rostlinolekar .bk-left img {
+  left: 0;
+  right: 0;
+}
 .bk-list li .bk-front {
   -webkit-transform-origin: 0% 50%;
   -ms-transform-origin: 0% 50%;
@@ -251,7 +415,7 @@ a {
   -ms-transform: translate3d(0, 0, 32px);
   transform: translate3d(0, 0, 32px);
   display: none;
-  width: 233px;
+  width: 230px;
   height: 313px;
   top: 5px;
   -webkit-backface-visibility: hidden;
@@ -292,7 +456,6 @@ a {
   left: 5px;
 }
 .bk-list li .bk-cover-back {
-  background-color: #34c08d;
   -webkit-transform: rotate3d(0, 1, 0, -180deg);
   -ms-transform: rotate3d(0, 1, 0, -180deg);
   transform: rotate3d(0, 1, 0, -180deg);
@@ -301,9 +464,9 @@ a {
   height: 390px;
   height: 311px;
   top: 5px;
-  -webkit-transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 233px);
-  -ms-transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 233px);
-  transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 233px);
+  -webkit-transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 230px);
+  -ms-transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 230px);
+  transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 230px);
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -381,7 +544,7 @@ a {
 .bk-list li .bk-front,
 .bk-list li .bk-back,
 .bk-list li .bk-front  > div {
-  width: 243px;
+  width: 240px;
   height: 310px;
   height: 321px;
 }
@@ -394,7 +557,7 @@ a {
 }
 .bk-list li .bk-top,
 .bk-list li .bk-bottom {
-  width: 233px;
+  width: 230px;
   height: 64px;
   -moz-backface-visibility: hidden;
 }
@@ -412,10 +575,6 @@ a {
 .bk-list li .bk-bottom {
   background: #eeeeee url("../images/listy.png") no-repeat 0 0;
 }
-.bk-list li .bk-right {
-  background-color: #34c08d;
-  background-color: #eee;
-}
 .bk-list li .bk-cover:after,
 .bk-list li .bk-back:after {
   content: '';
@@ -430,11 +589,12 @@ a {
 }
 .bk-left {
   position: relative;
+  background-image: url('../images/bk-left.png');
 }
 .bk-left img {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 10px;
+  left: 17px;
 }
 .bk-left h2 {
   width: 321px;
@@ -452,50 +612,6 @@ a {
   font-family: "ProximaNova Bold", Georgia, serif;
   color: #fff;
 }
-/*
-.bk-content {
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    bottom: 20px;
-    right: 20px;
-    padding: 30px;
-    overflow: hidden;
-    background: #fff;
-    opacity: 0;
-    pointer-events: none;
-    backface-visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
-    cursor: default;
-    p {
-        padding: 0 0 10px;
-        color: #000;
-        font-size: 13px;
-        line-height: 20px;
-        text-align: justify;
-        -khtml-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-}
-.bk-content-current {
-    opacity: 1;
-    pointer-events: auto;
-}
-*/
-.bk-book-shelf {
-  /*
-    .bk-left {
-        h2 {
-            color: #fff;
-            font-size: 15px;
-            line-height: 40px;
-            padding-right: 10px;
-            text-align: right;
-        }
-    }
-*/
-}
 .bk-book-shelf .bk-cover {
   background-color: #34c08d;
 }
@@ -512,12 +628,6 @@ a {
 }
 .bk-book-shelf .bk-cover h2 span:first-child {
   display: block;
-}
-.bk-front .bk-book-shelf > div,
-.bk-book-shelf .bk-back,
-.bk-book-shelf .bk-left,
-.bk-book-shelf .bk-front:after {
-  background-color: #34c08d;
 }
 .bk-book-shelf .bk-cover h2 span:first-child,
 .bk-book-shelf .bk-left h2 span:first-child {
@@ -545,29 +655,6 @@ a {
   -ms-transform: rotate3d(0, 1, 0, 35deg);
   transform: rotate3d(0, 1, 0, 35deg);
 }
-/*
-.no-preserve3d .bk-list li .bk-book &>div,
-.no-preserve3d .bk-list li .bk-book .bk-cover-back {
-    display: none;
-}
-
-.no-preserve3d {
-    .bk-list {
-        width: auto;
-        li {
-            position: relative;
-            width: 300px;
-            margin: 10px;
-            float: left;
-            .bk-book {
-                & > div.bk-front {
-                    display: block;
-                }
-            }
-        }
-    }
-}
-*/
 .no-preserve3d .bookshelf .bk-list {
   -webkit-perspective: 1800px;
   -ms-perspective: 1800px;
