@@ -252,6 +252,7 @@ a {
   position: absolute;
   left: 0;
   bottom: 23px;
+  width: 100%;
   height: 70%;
   background: url("../images/logo-rolnicke_noviny.png") no-repeat center bottom;
 }
@@ -811,12 +812,15 @@ a {
 }
 .no-preserve3d .magazine-list li .bk-book .bk-front {
   z-index: 1;
+  background-color: none;
 }
 .no-preserve3d .magazine-list li .bk-book .bk-back,
 .no-preserve3d .magazine-list li .bk-book .bk-page,
 .no-preserve3d .magazine-list li .bk-book .bk-top,
 .no-preserve3d .magazine-list li .bk-book .bk-bottom,
-.no-preserve3d .magazine-list li .bk-book .bk-right {
+.no-preserve3d .magazine-list li .bk-book .bk-right,
+.no-preserve3d .magazine-list li .bk-book .bk-left,
+.no-preserve3d .magazine-list li .bk-book .bk-cover-back {
   display: none;
 }
 *,
