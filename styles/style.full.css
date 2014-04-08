@@ -265,6 +265,7 @@ a {
   padding: 20px 15px 20px 25px;
   margin: 0;
   overflow: hidden;
+  max-height: 95%;
 }
 .bk-list li .bk-page .pageContent h2 {
   font-size: 2em;
@@ -616,6 +617,11 @@ a {
   position: relative;
   z-index: 6;
   text-align: center;
+}
+.no-preserve3d .magazine-list li .bk-book:hover {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 .no-preserve3d .magazine-list li .bk-book .bk-front {
   z-index: 1;
