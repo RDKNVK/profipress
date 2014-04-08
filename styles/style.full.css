@@ -776,7 +776,8 @@ a {
 .no-preserve3d .bookshelf .bk-list li .bk-book .bk-page,
 .no-preserve3d .bookshelf .bk-list li .bk-book .bk-top,
 .no-preserve3d .bookshelf .bk-list li .bk-book .bk-bottom,
-.no-preserve3d .bookshelf .bk-list li .bk-book .bk-right {
+.no-preserve3d .bookshelf .bk-list li .bk-book .bk-right,
+.no-preserve3d .bookshelf .bk-list li .bk-book .bk-cover-back {
   display: none;
 }
 .no-preserve3d .bookshelf .bk-list li .bk-book .bk-left {
