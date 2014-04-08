@@ -410,7 +410,7 @@ a {
 }
 .bk-list li .bk-top,
 .bk-list li .bk-bottom {
-  background-color: #eee;
+  background: #eeeeee url("../images/listy.png") no-repeat 0 0;
 }
 .bk-list li .bk-right {
   background-color: #34c08d;
