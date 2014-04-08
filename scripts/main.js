@@ -49,9 +49,9 @@ $(function() {
         }
     }
     if ($('.bookshelf').length) {
-        colorGrad(".shelf-1");
-        colorGrad(".shelf-2");
-        colorGrad(".shelf-3");
-
+        var shelves = $('.bookshelf').length;
+        for (var i = 0; i < shelves; i++) {
+			colorGrad('.shelf-' + (i+1));
+        }
     }
 });
