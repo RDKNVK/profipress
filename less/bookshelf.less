@@ -107,15 +107,19 @@
                 margin: 0;
                 overflow: hidden;
                 max-height: 95%;
-
+                h1, h2 {
+                    text-align: center;
+                }
+                h1 {
+                    font-size: 2.5em;
+                }
                 h2 {
                     font-size: 2em;
-                    text-align: center;
                 }
                 p {
                     text-align: left;
                     line-height: 1.2;
-                    font-size: 1em;
+                    font-size: 1.1em;
                     margin: 10px 0;
                 }
             }
@@ -156,6 +160,11 @@
             .bk-front {
                 //transform: translate3d(0,0,20px) rotate3d(0,1,0,-160deg);
                 transform: translate3d(4px,0,33px) rotate3d(0,1,0,-160deg);
+                .bk-cover-back {
+                    transform: none;
+                    transition: transform 0s;
+                    transition-delay: 0.20s;
+                }
             }
         }
         .bk-book.bk-viewinside {

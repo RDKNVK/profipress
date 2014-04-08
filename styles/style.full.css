@@ -267,14 +267,20 @@ a {
   overflow: hidden;
   max-height: 95%;
 }
+.bk-list li .bk-page .pageContent h1,
+.bk-list li .bk-page .pageContent h2 {
+  text-align: center;
+}
+.bk-list li .bk-page .pageContent h1 {
+  font-size: 2.5em;
+}
 .bk-list li .bk-page .pageContent h2 {
   font-size: 2em;
-  text-align: center;
 }
 .bk-list li .bk-page .pageContent p {
   text-align: left;
   line-height: 1.2;
-  font-size: 1em;
+  font-size: 1.1em;
   margin: 10px 0;
 }
 .bk-list li .bk-back {
@@ -324,6 +330,15 @@ a {
   -webkit-transform: translate3d(4px, 0, 33px) rotate3d(0, 1, 0, -160deg);
   -ms-transform: translate3d(4px, 0, 33px) rotate3d(0, 1, 0, -160deg);
   transform: translate3d(4px, 0, 33px) rotate3d(0, 1, 0, -160deg);
+}
+.bk-list li .bk-viewinside .bk-front .bk-cover-back {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transition: -webkit-transform 0s;
+  transition: transform 0s;
+  -webkit-transition-delay: 0.20s;
+  transition-delay: 0.20s;
 }
 .bk-list li .bk-book.bk-viewinside {
   -webkit-transform: rotate3d(0, 1, 0, 0deg) translateX(0px) translateZ(100px) !important;
