@@ -6,13 +6,12 @@ $(function() {
 
     function colorGrad(shelf) {
 
-        var $colors = $(shelf + " .bk-list li .bk-book .bk-left"), //tady vyber knihy
+        var $colors = $(shelf + " .bk-list li .bk-book .bk-left"),
             color = $colors.eq(0).css("background-color"),
             components = color.match(/\d+/g),
             hsl = rgbToHsl(components[0], components[1], components[2]);
 
         $colors.each(function(i) {
-            //tady pak uprav to 0.05, ať to co nejvíc odpovídá tomu přechodu v psd
             $(this).css("background-color", getHslColor(hsl[0], hsl[1], hsl[2] + i * 0.015));
         });
 
@@ -27,7 +26,7 @@ $(function() {
             var h, s, l = (max + min) / 2;
 
             if (max == min) {
-                h = s = 0; // achromatic
+                h = s = 0;
             } else {
                 var d = max - min;
                 s = l > 0.5 ? d / (2 - max - min) : d / (max + min);

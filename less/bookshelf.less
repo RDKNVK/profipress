@@ -523,8 +523,7 @@
 .bk-list li .bk-left,
 .bk-list li .bk-right {
     width: 40px;
-	width: @bookW + 1; /// tohle delalo bordel
-    //left: -20px;
+	width: @bookW + 1;
     left: -28px;
     background-color: transparent;
 }
@@ -532,7 +531,6 @@
 .bk-list li .bk-bottom {
     width: @frontW - 10;
     height: @bookW;
-    //backface-visibility: hidden;
     -moz-backface-visibility: hidden; // musi byt prave jen tento prefix (chrome/ff rozdil)
 }
 .bk-list li .bk-top {
@@ -546,10 +544,8 @@
 .bk-list li .bk-page {
 	background-color: #fff;
 }
-//.bk-list li .bk-right,
 .bk-list li .bk-top,
 .bk-list li .bk-bottom {
-    //background-color: #eee;
     .bg(#eee,'listy.png');
 }
 .bk-list li .bk-cover:after,
@@ -564,23 +560,18 @@
     box-shadow: 1px 0 3px rgba(255, 255, 255, 0.1);
 }
 .bk-left {
-	//.bg('left-zemedelec.png');
     position: relative;
     background-image: url('@{imagesDir}bk-left.png');
     img {
         position: absolute;
         bottom: 10px;
         left: 17px;
-        //display: none;
-
     }
     h2 {
         width: @bookH;
         height: @bookW;
         transform-origin: 0 0;
-        //transform: rotate(90deg) translateY(-@bookW);
         transform: rotate(-90deg) translateX(-@bookH);
-        //background-color: red;
         line-height: @bookW;
         text-align: right;
         padding-right: 30px;
@@ -658,8 +649,7 @@
             li {
                 left: 0;
                 .bk-book {
-                    //transform: rotate3d(0,1,0,190deg);
-                    transform: none;
+                     transform: none;
                     &:hover {
                         transform: none;
                         * {

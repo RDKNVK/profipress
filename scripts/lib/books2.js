@@ -1,14 +1,6 @@
 var Books = (function() {
 
-    var /*transEndEventNames = {
-        'WebkitTransition': 'webkitTransitionEnd',
-        'MozTransition': 'transitionend',
-        'OTransition': 'oTransitionEnd',
-        'msTransition': 'MSTransitionEnd',
-        'transition': 'transitionend'
-    },
-        transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],*/
-        $bookLists = $('.bookshelf');
+    var $bookLists = $('.bookshelf');
 
     function init() {
         $bookLists.each(function() {
@@ -30,31 +22,7 @@ var Books = (function() {
                 } else {
                     $parent.css('z-index', booksCount - 1 - i).data('stackval', booksCount - 1 - i);
                 }
-/*
-                $book.on('click', function() {
 
-                    if (currentbook !== -1 && currentbook !== $parent.index()) {
-                        closeCurrent();
-                    }
-
-                    if ($book.data('opened')) {
-                        $book.data('opened', false).removeClass('bk-viewinside').on(transEndEventName, function() {
-                            $(this).off(transEndEventName).removeClass('bk-outside');
-                            $parent.css('z-index', $parent.data('stackval'));
-                            currentbook = -1;
-                        });
-                    } else {
-                        $book.data('opened', true).addClass('bk-outside').on(transEndEventName, function() {
-                            $(this).off(transEndEventName).addClass('bk-viewinside');
-                            $parent.css('z-index', booksCount);
-                            currentbook = $parent.index();
-                        });
-                        current = 0;
-                        $content.removeClass('bk-content-current').eq(current).addClass('bk-content-current');
-                    }
-
-                });
-*/
                 if ($content.length > 1) {
 
                     var $navPrev = $('<span class="bk-page-prev">&lt;</span>'),
@@ -77,9 +45,7 @@ var Books = (function() {
                         }
                         return false;
                     });
-
                 }
-
             });
         });
     }
