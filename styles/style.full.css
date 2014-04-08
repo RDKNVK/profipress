@@ -136,6 +136,15 @@ a {
   -ms-perspective-origin: 50% 15%;
   perspective-origin: 50% 15%;
 }
+.bookshelf .bk-list li {
+  /*&:first-child {
+                .bk-book {
+                    .bk-left {
+                        background-color: #148a4e;
+                    }
+                }
+            }*/
+}
 .bookshelf .bk-list li .bk-book {
   -webkit-transform: rotate3d(0, 1, 0, 90deg);
   -ms-transform: rotate3d(0, 1, 0, 90deg);
@@ -153,9 +162,6 @@ a {
 }
 .bookshelf .bk-list li .bk-book .bk-page {
   display: none;
-}
-.bookshelf .bk-list li:first-child .bk-book .bk-left {
-  background-color: #148a4e;
 }
 .bk-list.magazine-list {
   *zoom: 1;
@@ -227,8 +233,13 @@ a {
 .bk-list li .bk-book.zemedelec .bk-front:after {
   background-color: #009350;
 }
-.bk-list li .bk-book.zemedelec .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.zemedelec .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-zemedelec.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.rolnicke_noviny .bk-cover-back,
 .bk-front .bk-list li .bk-book.rolnicke_noviny > div,
@@ -237,8 +248,12 @@ a {
 .bk-list li .bk-book.rolnicke_noviny .bk-front:after {
   background-color: #4c915d;
 }
-.bk-list li .bk-book.rolnicke_noviny .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.rolnicke_noviny .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  height: 70%;
+  background: url("../images/logo-rolnicke_noviny.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.farmar .bk-cover-back,
 .bk-front .bk-list li .bk-book.farmar > div,
@@ -247,8 +262,13 @@ a {
 .bk-list li .bk-book.farmar .bk-front:after {
   background-color: #f03920;
 }
-.bk-list li .bk-book.farmar .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.farmar .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-farmar.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.uroda .bk-cover-back,
 .bk-front .bk-list li .bk-book.uroda > div,
@@ -257,8 +277,13 @@ a {
 .bk-list li .bk-book.uroda .bk-front:after {
   background-color: #459737;
 }
-.bk-list li .bk-book.uroda .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.uroda .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-uroda.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.agronom .bk-cover-back,
 .bk-front .bk-list li .bk-book.agronom > div,
@@ -267,8 +292,13 @@ a {
 .bk-list li .bk-book.agronom .bk-front:after {
   background-color: #50a741;
 }
-.bk-list li .bk-book.agronom .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.agronom .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-agronom.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.mechanizace .bk-cover-back,
 .bk-front .bk-list li .bk-book.mechanizace > div,
@@ -277,8 +307,13 @@ a {
 .bk-list li .bk-book.mechanizace .bk-front:after {
   background-color: #226a9f;
 }
-.bk-list li .bk-book.mechanizace .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.mechanizace .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-mechanizace.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.chov .bk-cover-back,
 .bk-front .bk-list li .bk-book.chov > div,
@@ -287,8 +322,13 @@ a {
 .bk-list li .bk-book.chov .bk-front:after {
   background-color: #cd5e17;
 }
-.bk-list li .bk-book.chov .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.chov .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-chov.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.krmivarstvi .bk-cover-back,
 .bk-front .bk-list li .bk-book.krmivarstvi > div,
@@ -297,8 +337,13 @@ a {
 .bk-list li .bk-book.krmivarstvi .bk-front:after {
   background-color: #f05e19;
 }
-.bk-list li .bk-book.krmivarstvi .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.krmivarstvi .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-krmivarstvi.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.veterinarstvi .bk-cover-back,
 .bk-front .bk-list li .bk-book.veterinarstvi > div,
@@ -307,8 +352,13 @@ a {
 .bk-list li .bk-book.veterinarstvi .bk-front:after {
   background-color: #137cb3;
 }
-.bk-list li .bk-book.veterinarstvi .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.veterinarstvi .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-veterinarstvi.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.vetklinika .bk-cover-back,
 .bk-front .bk-list li .bk-book.vetklinika > div,
@@ -317,8 +367,13 @@ a {
 .bk-list li .bk-book.vetklinika .bk-front:after {
   background-color: #0c77ab;
 }
-.bk-list li .bk-book.vetklinika .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.vetklinika .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-vetklinika.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.zahradnictvi .bk-cover-back,
 .bk-front .bk-list li .bk-book.zahradnictvi > div,
@@ -327,8 +382,13 @@ a {
 .bk-list li .bk-book.zahradnictvi .bk-front:after {
   background-color: #2daa46;
 }
-.bk-list li .bk-book.zahradnictvi .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.zahradnictvi .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-zahradnictvi.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.floristika .bk-cover-back,
 .bk-front .bk-list li .bk-book.floristika > div,
@@ -337,8 +397,13 @@ a {
 .bk-list li .bk-book.floristika .bk-front:after {
   background-color: #db588e;
 }
-.bk-list li .bk-book.floristika .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.floristika .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-floristika.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.komunalni_technika .bk-cover-back,
 .bk-front .bk-list li .bk-book.komunalni_technika > div,
@@ -347,8 +412,13 @@ a {
 .bk-list li .bk-book.komunalni_technika .bk-front:after {
   background-color: #e48313;
 }
-.bk-list li .bk-book.komunalni_technika .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.komunalni_technika .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-komunalni_technika.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.energie21 .bk-cover-back,
 .bk-front .bk-list li .bk-book.energie21 > div,
@@ -357,8 +427,13 @@ a {
 .bk-list li .bk-book.energie21 .bk-front:after {
   background-color: #e64220;
 }
-.bk-list li .bk-book.energie21 .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.energie21 .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-energie21.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.altenergie .bk-cover-back,
 .bk-front .bk-list li .bk-book.altenergie > div,
@@ -367,8 +442,13 @@ a {
 .bk-list li .bk-book.altenergie .bk-front:after {
   background-color: #e64220;
 }
-.bk-list li .bk-book.altenergie .bk-left img {
-  left: 26px;
+.bk-list li .bk-book.altenergie .bk-left .logo {
+  position: absolute;
+  left: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-altenergie.png") no-repeat center bottom;
 }
 .bk-list li .bk-book.rostlinolekar .bk-cover-back,
 .bk-front .bk-list li .bk-book.rostlinolekar > div,
@@ -377,9 +457,13 @@ a {
 .bk-list li .bk-book.rostlinolekar .bk-front:after {
   background-color: #008363;
 }
-.bk-list li .bk-book.rostlinolekar .bk-left img {
+.bk-list li .bk-book.rostlinolekar .bk-left .logo {
+  position: absolute;
   left: 0;
-  right: 0;
+  bottom: 23px;
+  width: 100%;
+  height: 70%;
+  background: url("../images/logo-rostlinolekar.png") no-repeat center bottom;
 }
 .bk-list li .bk-front {
   -webkit-transform-origin: 0% 50%;
@@ -727,6 +811,13 @@ a {
 }
 .no-preserve3d .magazine-list li .bk-book .bk-front {
   z-index: 1;
+}
+.no-preserve3d .magazine-list li .bk-book .bk-back,
+.no-preserve3d .magazine-list li .bk-book .bk-page,
+.no-preserve3d .magazine-list li .bk-book .bk-top,
+.no-preserve3d .magazine-list li .bk-book .bk-bottom,
+.no-preserve3d .magazine-list li .bk-book .bk-right {
+  display: none;
 }
 *,
 *:before,
