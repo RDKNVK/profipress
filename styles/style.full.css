@@ -151,6 +151,9 @@ a {
   -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
 }
+.bookshelf .bk-list li .bk-book .bk-page {
+  display: none;
+}
 .bk-list.magazine-list {
   *zoom: 1;
   width: 960px;
@@ -249,16 +252,29 @@ a {
   transform: translate3d(0, 0, 32px);
   display: none;
   width: 233px;
-  height: 300px;
   height: 313px;
   top: 5px;
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.bk-list li .bk-page nav .bk-page-prev,
-.bk-list li .bk-page nav .bk-page-next {
-  line-height: 20px;
+.bk-list li .bk-page .pageContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 15px 20px 25px;
+  margin: 0;
+  overflow: hidden;
+}
+.bk-list li .bk-page .pageContent h2 {
+  font-size: 2em;
+  text-align: center;
+}
+.bk-list li .bk-page .pageContent p {
+  text-align: left;
+  line-height: 1.2;
+  font-size: 1em;
+  margin: 10px 0;
 }
 .bk-list li .bk-back {
   -webkit-transform: rotate3d(0, 1, 0, -180deg) translate3d(0, 0, 33px);
@@ -304,9 +320,9 @@ a {
   transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 291px);
 }
 .bk-list li .bk-viewinside .bk-front {
-  -webkit-transform: translate3d(0, 0, 33px) rotate3d(0, 1, 0, -160deg);
-  -ms-transform: translate3d(0, 0, 33px) rotate3d(0, 1, 0, -160deg);
-  transform: translate3d(0, 0, 33px) rotate3d(0, 1, 0, -160deg);
+  -webkit-transform: translate3d(4px, 0, 33px) rotate3d(0, 1, 0, -160deg);
+  -ms-transform: translate3d(4px, 0, 33px) rotate3d(0, 1, 0, -160deg);
+  transform: translate3d(4px, 0, 33px) rotate3d(0, 1, 0, -160deg);
 }
 .bk-list li .bk-book.bk-viewinside {
   -webkit-transform: rotate3d(0, 1, 0, 0deg) translateX(0px) translateZ(100px) !important;
@@ -420,56 +436,37 @@ a {
   font-family: "ProximaNova Bold", Georgia, serif;
   color: #fff;
 }
+/*
 .bk-content {
-  position: absolute;
-  top: 30px;
-  left: 20px;
-  bottom: 20px;
-  right: 20px;
-  padding: 30px;
-  overflow: hidden;
-  background: #fff;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-  cursor: default;
-}
-.bk-content p {
-  padding: 0 0 10px;
-  color: #000;
-  font-size: 13px;
-  line-height: 20px;
-  text-align: justify;
-  -khtml-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    padding: 30px;
+    overflow: hidden;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    backface-visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    cursor: default;
+    p {
+        padding: 0 0 10px;
+        color: #000;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: justify;
+        -khtml-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
 }
 .bk-content-current {
-  opacity: 1;
-  pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
 }
-.bk-page nav {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  position: relative;
-  z-index: 100;
-  cursor: pointer;
-}
-.bk-page nav span {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  color: #aaa;
-  background: #f0f0f0;
-  border-radius: 50%;
-}
+*/
 .bk-book-shelf {
   /*
     .bk-left {

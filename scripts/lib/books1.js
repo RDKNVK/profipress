@@ -53,7 +53,7 @@ var Books = (function() {
 
 			} );
 
-			if( $content.length > 1 ) {
+			/*if( $content.length > 1 ) {
 
 				var $navPrev = $( '<span class="bk-page-prev">&lt;</span>' ),
 					$navNext = $( '<span class="bk-page-next">&gt;</span>' );
@@ -76,7 +76,7 @@ var Books = (function() {
 					return false;
 				} );
 
-			}
+			}*/
 			
 		} );
 

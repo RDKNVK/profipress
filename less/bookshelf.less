@@ -23,6 +23,9 @@
                 .bk-left {
                     box-shadow: 0px 3px 5px rgba(0,0,0,.5);
                 }
+                .bk-page {
+                    display: none;
+                }
             }
         }
     }
@@ -89,25 +92,33 @@
             }
         }
         .bk-page {
-            //transform: translate3d(0,0,19px);
             transform: translate3d(0,0,32px);
             display: none;
-            //width: 295px;
             width: @frontW - 10;
-            //height: 390px;
-
-            height: @bookH - 21;
             height: @bookH - 8;
             top: 5px;
             backface-visibility: hidden;
-            nav {
-                .bk-page-prev, 
-                .bk-page-next {
-                    line-height: 20px;
+
+            .pageContent {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 20px 15px 20px 25px;
+                margin: 0;
+                overflow: hidden;
+                h2 {
+                    font-size: 2em;
+                    text-align: center;
+                }
+                p {
+                    text-align: left;
+                    line-height: 1.2;
+                    font-size: 1em;
+                    margin: 10px 0;
                 }
             }
-
         }
+
         .bk-back {
             //transform: rotate3d(0,1,0,-180deg) translate3d(0,0,20px);
             transform: rotate3d(0,1,0,-180deg) translate3d(0,0,33px);
@@ -142,7 +153,7 @@
         .bk-viewinside {
             .bk-front {
                 //transform: translate3d(0,0,20px) rotate3d(0,1,0,-160deg);
-                transform: translate3d(0,0,33px) rotate3d(0,1,0,-160deg);
+                transform: translate3d(4px,0,33px) rotate3d(0,1,0,-160deg);
             }
         }
         .bk-book.bk-viewinside {
@@ -259,6 +270,7 @@
 
     }
 }
+/*
 .bk-content {
     position: absolute;
     top: 30px;
@@ -288,24 +300,7 @@
     opacity: 1;
     pointer-events: auto;
 }
-.bk-page {
-    nav {
-        display: block;
-        text-align: center;
-        margin-top: 20px;
-        position: relative;
-        z-index: 100;
-        cursor: pointer;
-        span {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            color: #aaa;
-            background: #f0f0f0;
-            border-radius: 50%;
-        }
-    }
-}
+*/
 
 // puvodne .book-1
 .bk-book-shelf {
